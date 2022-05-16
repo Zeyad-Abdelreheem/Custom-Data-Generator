@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
-
 
 import tensorflow as tf
 import albumentations as alb
@@ -29,6 +27,8 @@ class DataGenerator(tf.keras.utils.Sequence):
         
         returns a data generator object
         """
+        
+        
         self.df = df.copy()
         self.df_path = df_path
         self.X_cols = X_cols
@@ -38,6 +38,8 @@ class DataGenerator(tf.keras.utils.Sequence):
         self.shuffle = shuffle
         self.rescale = rescale
         self.n = len(self.df)
+        
+        
         ###### Write your custom function here #######
         # example from :-
         # https://medium.com/analytics-vidhya/write-your-own-custom-data-generator-for-tensorflow-keras-1252b64e41c3
